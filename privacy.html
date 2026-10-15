@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chính Sách Quyền Riêng Tư - StuWork</title>
+  <meta name="description" content="Chính sách quyền riêng tư và bảo vệ dữ liệu người dùng của ứng dụng và nền tảng hướng nghiệp StuWork.">
+  <link rel="icon" type="image/jpeg" href="/logo.jpg">
+  <link rel="canonical" href="https://stuwork.site/privacy.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #091438;
+      --primary-light: #162456;
+      --accent: #05CBA0;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --border: #e2e8f0;
+      --border-focus: #05CBA0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: #ffffff;
+      padding: 40px 20px;
+      border-bottom: 3px solid var(--accent);
+    }
+
+    .header-container {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .header-logo-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(5, 203, 160, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .header-titles h1 {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+
+    .header-titles p {
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    .badge-app {
+      display: inline-block;
+      background: rgba(5, 203, 160, 0.15);
+      color: #05CBA0;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-top: 6px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 32px auto 60px;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 36px 40px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    @media (max-width: 640px) {
+      .card {
+        padding: 24px 20px;
+      }
+      .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    .meta-box {
+      background: #f1f5f9;
+      border-left: 4px solid var(--accent);
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 30px;
+      font-size: 14px;
+      color: var(--text-main);
+    }
+
+    .meta-box p {
+      margin-bottom: 4px;
+    }
+
+    .meta-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-top: 36px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h2 .num {
+      background: var(--primary);
+      color: #ffffff;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--primary-light);
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 14px;
+      font-size: 15px;
+      color: #334155;
+    }
+
+    ul, ol {
+      margin: 12px 0 18px 24px;
+      color: #334155;
+      font-size: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    strong {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .highlight-card {
+      background-color: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 18px 0;
+    }
+
+    .highlight-card p {
+      color: #065f46;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .deletion-box {
+      background-color: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin: 20px 0;
+    }
+
+    .deletion-box h3 {
+      color: #991b1b;
+      margin-top: 0;
+    }
+
+    .deletion-box p, .deletion-box li {
+      color: #7f1d1d;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      font-size: 14px;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 12px 14px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f8fafc;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    a {
+      color: #0284c7;
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 13px;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      background: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="header-logo-icon">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#05CBA0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 17L12 22L22 17" stroke="#05CBA0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 12L12 17L22 12" stroke="#05CBA0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="header-titles">
+        <h1>Chính Sách Quyền Riêng Tư (Privacy Policy)</h1>
+        <p>Ứng dụng & Nền tảng Hướng nghiệp Trải nghiệm StuWork</p>
+        <span class="badge-app">Gói ứng dụng: com.stuwork.app</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="card">
+      <div class="meta-box">
+        <p><strong>Ứng dụng:</strong> StuWork</p>
+        <p><strong>Tên gói (Package Name):</strong> com.stuwork.app</p>
+        <p><strong>Nhà phát triển:</strong> Đội ngũ StuWork (StuWork Development Team)</p>
+        <p><strong>Website chính thức:</strong> <a href="https://stuwork.site" target="_blank" rel="noopener">https://stuwork.site</a></p>
+        <p><strong>Ngày có hiệu lực:</strong> 16 tháng 10 năm 2026</p>
+      </div>
+
+      <p>
+        Chào mừng bạn đến với <strong>StuWork</strong>. Chúng tôi cam kết bảo vệ quyền riêng tư và thông tin cá nhân của người dùng khi sử dụng ứng dụng di động StuWork và nền tảng trực tuyến tại website <a href="https://stuwork.site" target="_blank" rel="noopener">https://stuwork.site</a>. 
+        Chính sách quyền riêng tư này giải thích rõ ràng cách thức chúng tôi thu thập, sử dụng, lưu trữ, bảo vệ và xử lý thông tin cá nhân của bạn theo đúng các tiêu chuẩn và chính sách của Google Play Developer Policy.
+      </p>
+
+      <h2><span class="num">1</span> Thông tin chúng tôi thu thập</h2>
+      <p>Để cung cấp trải nghiệm hướng nghiệp và mô phỏng nghề nghiệp hiệu quả, StuWork có thể thu thập các loại dữ liệu sau:</p>
+
+      <h3>a. Thông tin do bạn cung cấp trực tiếp:</h3>
+      <ul>
+        <li><strong>Thông tin tài khoản:</strong> Họ và tên, địa chỉ email, số điện thoại, mật khẩu (được mã hóa một chiều), ảnh đại diện (avatar).</li>
+        <li><strong>Thông tin khảo sát & định hướng nghề nghiệp:</strong> Sở thích, kỹ năng, định hướng học tập, lớp/trường học (dành cho học sinh, sinh viên).</li>
+        <li><strong>Dữ liệu tương tác & mô phỏng:</strong> Kết quả các ca làm việc mô phỏng nghề nghiệp (như HR Simulator, Logistics Port Simulator, v.v.), quyết định tình huống trong game, điểm đánh giá kỹ năng nghề nghiệp và lịch sử tham gia workshop.</li>
+      </ul>
+
+      <h3>b. Dữ liệu từ tài khoản bên thứ ba (Google OAuth):</h3>
+      <p>
+        Khi bạn lựa chọn đăng nhập nhanh bằng tài khoản <strong>Google</strong> (Google Sign-In), chúng tôi chỉ nhận từ Google các thông tin cơ bản công khai gồm: Họ tên, địa chỉ email và URL ảnh đại diện được cấp phép bởi bạn. Chúng tôi không thu thập mật khẩu Google hoặc danh bạ riêng tư của bạn.
+      </p>
+
+      <h3>c. Thông tin kỹ thuật & thiết bị thu thập tự động:</h3>
+      <ul>
+        <li><strong>Thông tin thiết bị:</strong> Mẫu mã thiết bị, hệ điều hành Android và phiên bản, mã định danh ứng dụng.</li>
+        <li><strong>Nhật ký hoạt động & hiệu năng:</strong> Báo cáo sự cố (crash reports), thời gian phản hồi hệ thống nhằm khắc phục lỗi kỹ thuật.</li>
+        <li><strong>Dữ liệu phân tích ẩn danh:</strong> Thống kê tương tác trang và tính năng thông qua Google Analytics (GA4) ở dạng ẩn danh hoàn toàn (anonymized data).</li>
+      </ul>
+
+      <h2><span class="num">2</span> Quyền truy cập thiết bị (Permissions)</h2>
+      <p>Ứng dụng di động StuWork (<code>com.stuwork.app</code>) chỉ yêu cầu các quyền thực sự tối thiểu cần thiết để vận hành:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Quyền hạn</th>
+            <th>Mục đích sử dụng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>android.permission.INTERNET</code></td>
+            <td>Cho phép ứng dụng kết nối mạng để tải nội dung khóa học, gửi nhận dữ liệu bài tập và đồng bộ tiến trình học tập.</td>
+          </tr>
+          <tr>
+            <td><code>ACCESS_NETWORK_STATE</code></td>
+            <td>Kiểm tra trạng thái kết nối mạng (Wifi/4G) nhằm đưa ra thông báo phù hợp khi mất mạng.</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="highlight-card">
+        <p><strong>Cam kết minh bạch:</strong> Ứng dụng StuWork <strong>KHÔNG</strong> tự ý truy cập danh bạ, tin nhắn SMS, micro, camera hoặc vị trí địa lý GPS nền của người dùng khi không có sự đồng ý rõ ràng.</p>
+      </div>
+
+      <h2><span class="num">3</span> Mục đích sử dụng dữ liệu</h2>
+      <p>Chúng tôi chỉ sử dụng dữ liệu thu thập được cho các mục đích chính đáng sau:</p>
+      <ol>
+        <li><strong>Cá nhân hóa lộ trình hướng nghiệp:</strong> Phân tích điểm mạnh, gợi ý ngành nghề và cung cấp kịch bản mô phỏng phù hợp với năng lực học sinh.</li>
+        <li><strong>Lưu trữ và chứng nhận tiến trình:</strong> Cấp chứng chỉ hoàn thành trải nghiệm nghề nghiệp và bảo lưu kết quả làm việc trên hệ thống.</li>
+        <li><strong>Xác thực và bảo mật tài khoản:</strong> Xác minh người dùng đăng nhập an toàn, gửi mã OTP khi khôi phục mật khẩu.</li>
+        <li><strong>Cải tiến chất lượng dịch vụ:</strong> Khắc phục lỗi ứng dụng, tối ưu hóa giao diện và trải nghiệm học tập.</li>
+        <li><strong>Hỗ trợ khách hàng:</strong> Giải đáp thắc mắc, tư vấn hỗ trợ kỹ thuật trong quá trình học và làm bài mô phỏng.</li>
+      </ol>
+
+      <h2><span class="num">4</span> Chia sẻ dữ liệu và Dịch vụ bên thứ ba</h2>
+      <p><strong>Chúng tôi KHÔNG BAO GIỜ bán, trao đổi hoặc thương mại hóa dữ liệu cá nhân của người dùng cho bất kỳ bên thứ ba nào vì mục đích quảng cáo.</strong></p>
+      <p>Chúng tôi chỉ chia sẻ dữ liệu với các nhà cung cấp hạ tầng công nghệ uy tín nhằm đảm bảo ứng dụng vận hành ổn định:</p>
+      <ul>
+        <li><strong>Google Play Services:</strong> Phân phối ứng dụng và quản lý cập nhật.</li>
+        <li><strong>Google OAuth:</strong> Dịch vụ xác thực danh tính an toàn khi bạn đăng nhập.</li>
+        <li><strong>Google Analytics (GA4):</strong> Thu thập số liệu thống kê sử dụng dịch vụ ở dạng ẩn danh để cải thiện ứng dụng.</li>
+        <li><strong>Hạ tầng điện toán đám mây:</strong> Lưu trữ cơ sở dữ liệu trên máy chủ bảo mật có tường lửa và kiểm soát truy cập nghiêm ngặt.</li>
+      </ul>
+
+      <h2><span class="num">5</span> Bảo mật và Lưu trữ dữ liệu</h2>
+      <ul>
+        <li>Toàn bộ thông tin truyền tải giữa ứng dụng di động và máy chủ đều được mã hóa bằng giao thức <strong>HTTPS / TLS 1.3</strong> bảo mật cao.</li>
+        <li>Mật khẩu người dùng được băm (hash) một chiều bằng các thuật toán an toàn tiêu chuẩn quốc tế trước khi lưu trữ.</li>
+        <li>Hệ thống máy chủ được bảo vệ bằng tường lửa nhiều lớp và cơ chế hạn chế quyền truy cập nghiêm ngặt.</li>
+      </ul>
+
+      <h2><span class="num">6</span> Quyền của người dùng & Xóa dữ liệu (Data Deletion)</h2>
+      <p>Người dùng luôn có toàn quyền kiểm soát thông tin cá nhân của mình trên StuWork:</p>
+      <ul>
+        <li><strong>Xem và cập nhật:</strong> Bạn có thể vào mục <em>Hồ sơ (Profile)</em> trên app để chỉnh sửa thông tin bất kỳ lúc nào.</li>
+        <li><strong>Yêu cầu sao lưu hoặc trích xuất dữ liệu:</strong> Bạn có quyền yêu cầu cung cấp bản sao dữ liệu cá nhân đang lưu trữ.</li>
+      </ul>
+
+      <div class="deletion-box">
+        <h3>Hướng Dẫn Yêu Cầu Xóa Tài Khoản & Xóa Dữ Liệu</h3>
+        <p>Tuân theo chính sách tài khoản của Google Play, người dùng có thể gửi yêu cầu xóa tài khoản cùng toàn bộ dữ liệu cá nhân liên quan duy nhất qua email:</p>
+        <p style="margin: 10px 0;">
+          👉 <strong>Gửi email trực tiếp đến:</strong> 
+          <a href="mailto:nguyenthanhtoanthinh45878@gmail.com"><strong>nguyenthanhtoanthinh45878@gmail.com</strong></a> 
+          <span style="font-weight: 600; color: #991b1b;">- LEADER PROJECT</span>
+        </p>
+        <p><strong>Cú pháp email yêu cầu:</strong></p>
+        <ul>
+          <li><strong>Tiêu đề:</strong> <code>Yêu cầu xóa tài khoản StuWork</code></li>
+          <li><strong>Nội dung:</strong> Cung cấp địa chỉ email đã dùng để đăng ký / đăng nhập tài khoản StuWork cần xóa.</li>
+        </ul>
+        <p style="margin-top: 8px;"><strong>Thời gian xử lý:</strong> Sau khi tiếp nhận và xác thực yêu cầu, tài khoản cùng toàn bộ thông tin cá nhân, kết quả bài test và lịch sử hoạt động sẽ được xóa vĩnh viễn khỏi hệ thống trong vòng <strong>30 ngày</strong>.</p>
+      </div>
+
+      <h2><span class="num">7</span> Quyền riêng tư của Trẻ em (Children's Privacy)</h2>
+      <p>
+        Nền tảng StuWork được thiết kế dành cho học sinh trung học phổ thông, sinh viên và người trẻ định hướng nghề nghiệp từ <strong>13 tuổi trở lên</strong>. 
+        Chúng tôi không cố ý thu thập thông tin nhận dạng cá nhân từ trẻ em dưới 13 tuổi. Nếu phụ huynh hoặc người giám hộ phát hiện con em mình dưới 13 tuổi cung cấp thông tin cho chúng tôi mà không có sự đồng ý của cha mẹ, vui lòng liên hệ ngay qua email để chúng tôi gỡ bỏ thông tin đó khỏi hệ thống ngay lập tức.
+      </p>
+
+      <h2><span class="num">8</span> Thay đổi Chính sách Quyền riêng tư</h2>
+      <p>
+        Chúng tôi có thể cập nhật chính sách này theo thời gian để phù hợp với các cải tiến về tính năng hoặc quy định pháp luật hiện hành. 
+        Mọi thay đổi sẽ được công bố trực tiếp trên trang web này cùng ngày cập nhật mới nhất. Người dùng nên định kỳ xem lại chính sách để nắm rõ quyền lợi của mình.
+      </p>
+
+      <h2><span class="num">9</span> Thông tin liên hệ</h2>
+      <p>Nếu bạn có bất kỳ thắc mắc, phản hồi hoặc cần hỗ trợ về Chính sách Quyền riêng tư của StuWork, vui lòng liên hệ với chúng tôi qua:</p>
+      <ul>
+        <li><strong>Tên dự án:</strong> StuWork - Nền tảng Hướng nghiệp Trải nghiệm</li>
+        <li><strong>Email hỗ trợ:</strong> <a href="mailto:nguyenthanhtoanthinh45878@gmail.com">nguyenthanhtoanthinh45878@gmail.com</a> (LEADER PROJECT)</li>
+        <li><strong>Website:</strong> <a href="https://stuwork.site" target="_blank" rel="noopener">https://stuwork.site</a></li>
+        <li><strong>Quốc gia:</strong> Việt Nam</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 StuWork. Toàn bộ quyền được bảo lưu.</p>
+    <p style="margin-top: 6px;">Tiếp sức cho thế hệ chuyên gia tương lai.</p>
+  </footer>
+
+</body>
+</html>
